@@ -10,5 +10,5 @@ UAT Deployment
 _Approval Gate:
 <img width="1474" height="832" alt="image" src="https://github.com/user-attachments/assets/d823670a-7a9f-46bd-9955-ef4a8d77ab19" />
 _
-<img width="1434" height="777" alt="image" src="https://github.com/user-attachments/assets/99ceff48-b713-47fd-9117-e9a8cf14cefb" />
+<img width="1415" height="838" alt="image" src="https://github.com/user-attachments/assets/520b67c4-520c-4cc8-a133-5ef7e07c65f1" />
 

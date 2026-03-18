@@ -1,0 +1,49 @@
+CI/CD Pipeline Flow
+
+This project uses a multi-stage Azure DevOps YAML pipeline to build and deploy an application.
+
+Continuous Integration (CI)
+
+The pipeline is triggered when code is pushed or a pull request is created for the main branch
+
+It installs Node.js and runs basic build steps using a template
+
+Test results are published (if available)
+
+A pipeline artifact named drop is created and stored
+
+The build output is packaged and published to the Azure Artifacts feed (lab08-feed)
+
+Continuous Deployment (CD)
+Deploy to Dev
+
+Runs automatically after the CI stage
+
+Downloads the artifact created in the CI stage
+
+Simulates deployment to the lab08-dev environment
+
+Deploy to UAT
+
+Runs after the Dev stage
+
+Requires manual approval before execution
+
+Deploys the same artifact to the lab08-uat environment
+
+Key Points
+
+Single build is reused across environments
+
+Artifacts ensure consistency between deployments
+
+Approval is required before UAT deployment
+
+Secrets are managed using a variable group
+
+Flow Summary
+Code Push / PR → CI (Build + Test + Artifact + Package)
+                     ↓
+               Deploy Dev
+                     ↓
+             Deploy UAT (Manual Approval)

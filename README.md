@@ -7,5 +7,8 @@ DEV Deployment
 <img width="1498" height="785" alt="image" src="https://github.com/user-attachments/assets/12402df1-a46a-4cd3-8d63-c3815222da5a" />
 
 UAT Deployment
+_Approval Gate:
+<img width="1474" height="832" alt="image" src="https://github.com/user-attachments/assets/d823670a-7a9f-46bd-9955-ef4a8d77ab19" />
+_
 <img width="1434" height="777" alt="image" src="https://github.com/user-attachments/assets/99ceff48-b713-47fd-9117-e9a8cf14cefb" />
 

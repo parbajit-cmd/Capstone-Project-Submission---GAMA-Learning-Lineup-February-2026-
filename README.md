@@ -12,3 +12,5 @@ _Approval Gate:
 _
 <img width="1415" height="838" alt="image" src="https://github.com/user-attachments/assets/520b67c4-520c-4cc8-a133-5ef7e07c65f1" />
 
+Published package in Artifacts feed
+<img width="1424" height="563" alt="image" src="https://github.com/user-attachments/assets/82099f1e-c4e3-4720-be2e-9099389f4bc4" />

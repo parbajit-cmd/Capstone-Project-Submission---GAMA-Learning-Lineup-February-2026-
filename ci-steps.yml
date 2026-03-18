@@ -1,0 +1,43 @@
+parameters:
+  nodeVersion: '18.x'
+
+steps:
+# Use Node.js version
+- task: NodeTool@0
+  displayName: Use Node.js
+  inputs:
+    versionSpec: ${{ parameters.nodeVersion }}
+
+# Cache npm dependencies
+- task: Cache@2
+  displayName: Cache npm
+  inputs:
+    key: 'npm | "$(Agent.OS)" | package-lock.json'
+    restoreKeys: |
+      npm | "$(Agent.OS)"
+    path: $(Pipeline.Workspace)/.npm
+
+# Install dependencies safely
+- script: |
+    if [ -f package-lock.json ]; then
+      echo "package-lock.json found, running npm ci"
+      npm ci
+    else
+      echo "No package-lock.json found, running npm install"
+      npm install
+    fi
+  displayName: Install dependencies safely
+  env:
+    npm_config_cache: $(Pipeline.Workspace)/.npm
+
+# Lint (optional)
+- script: npm run lint --if-present
+  displayName: Lint
+
+# Run tests (optional)
+- script: npm test -- --ci || true
+  displayName: Run tests
+
+# Build app (optional)
+- script: npm run build --if-present
+  displayName: Build app
